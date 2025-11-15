@@ -26,12 +26,12 @@ const Hero = () => {
         </p>
 
         <div>
-          <Button>
+          <Button className="cursor-pointer">
             Contact me
-            <MoveRight />
+            <MoveRight className="relative top-0.5" />
           </Button>
 
-          <Button variant="outline" className="ml-2">
+          <Button variant="outline" className="ml-2 cursor-pointer">
             My Resume
             <Download />
           </Button>

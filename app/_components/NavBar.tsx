@@ -32,16 +32,16 @@ const NavBar = () => {
         {/* Menu */}
         <ul className="hidden lg:flex gap-10 shadow-lg rounded-full px-4">
           <li className="px-4 py-3">
-            <a href="">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li className="px-4 py-3">
-            <a href="">About me</a>
+            <a href="#about">About me</a>
           </li>
           <li className="px-4 py-3">
-            <a href="">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li className="px-4 py-3">
-            <a href="">My work</a>
+            <a href="#mywork">My work</a>
           </li>
         </ul>
 
@@ -51,7 +51,7 @@ const NavBar = () => {
 
           {/* connect */}
           <div>
-            <Button variant="outline">Contact</Button>
+            <Button variant="outline" className="cursor-pointer">Contact</Button>
           </div>
 
           <div className="block lg:hidden">
@@ -66,16 +66,16 @@ const NavBar = () => {
 
                 <ul>
                   <li className="px-6 py-3 border-b border-gray-200">
-                    <a href="">Home</a>
+                    <a href="#home">Home</a>
                   </li>
                   <li className="px-6 py-3 border-b border-gray-200">
-                    <a href="">About me</a>
+                    <a href="#about">About me</a>
                   </li>
                   <li className="px-6 py-3 border-b border-gray-200">
-                    <a href="">Services</a>
+                    <a href="#services">Services</a>
                   </li>
                   <li className="px-6 py-3 border-b border-gray-200">
-                    <a href="">My work</a>
+                    <a href="#mywork">My work</a>
                   </li>
                 </ul>
 
