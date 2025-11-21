@@ -5,7 +5,6 @@ import { BriefcaseBusiness, CodeXml, GraduationCap } from 'lucide-react'
 const About = () => {
   return (
     <div id="about" className="w-full px-[12%] scroll-mt-20">
-        <h4 className="text-center mb-2 text-lg">Introduction</h4>
         <h2 className="text-center mb-6 text-3xl">About me</h2>
 
         <div className="flex gap-10">
