@@ -1,13 +1,27 @@
 import React from 'react'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
 
 const page = () => {
   return (
     <div className="px-6 py-4">
-        <div className="border-b border-gray-200 pb-2">
-            <h2 className="text-2xl font-semibold">Backend Engineer — Marketplace Applications</h2>
-            <p className="text-sm text-gray-600 flex flex-col">
-                <span>Trioangle Technologies, Aug 2021 - Dec 2024</span>
-            </p>
+        <div className="border-b border-gray-200 pb-2 flex items-center justify-between">
+            <div>
+                <h2 className="text-2xl font-semibold">Backend Engineer — Marketplace Applications</h2>
+                <p className="text-sm text-gray-600 flex flex-col">
+                    <span>Trioangle Technologies, Aug 2021 - Dec 2024</span>
+                </p>
+            </div>
+
+            <div>
+                <Link href="/#experience">
+                    <Button size="sm" className="cursor-pointer">
+                        <ArrowLeft />
+                        Back
+                    </Button>
+                </Link>
+            </div>
         </div>
 
         <div>
@@ -53,28 +67,6 @@ const page = () => {
 
             <ul className="pl-12 list-disc">
                 <li>
-                    <p>Payments Integration (Stripe, PayPal, Client Gateway)</p>
-
-                    <ul className="pl-12 list-disc">
-                        <li>
-                            Integrated Stripe/PayPal for one-time payments and refunds.
-                        </li>
-
-                        <li>
-                            Implemented Stripe Connect / account preferences to handle marketplace payouts (connect accounts, onboarding, payouts settings).
-                        </li>
-                        
-                        <li>
-                            Handled refunds & reconciliation workflows on both Stripe and PayPal.
-                        </li>
-
-                        <li>
-                            Ensured secure handling of payment webhooks and retried failed events.
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
                     <p>
                         Airbnb Clone — Booking & Chat
                     </p>
@@ -112,6 +104,28 @@ const page = () => {
                         </li>
                     </ul>
                 </li>
+
+                <li>
+                    <p>Payments Integration (Stripe, PayPal, Client Gateway)</p>
+
+                    <ul className="pl-12 list-disc">
+                        <li>
+                            Integrated Stripe/PayPal for one-time payments and refunds.
+                        </li>
+
+                        <li>
+                            Implemented Stripe Connect / account preferences to handle marketplace payouts (connect accounts, onboarding, payouts settings).
+                        </li>
+                        
+                        <li>
+                            Handled refunds & reconciliation workflows on Stripe.
+                        </li>
+
+                        <li>
+                            Ensured secure handling of payment webhooks and retried failed events.
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -119,7 +133,7 @@ const page = () => {
             <h6 className="font-semibold">Tech Stack</h6>
 
             <p className="pl-12">
-                Laravel, Node.js, MySQL/Postgres, Redis (if used), Stripe, PayPal, client payment gateway, REST APIs, (React / Vue / front-end tech you used), WebSockets or Firebase / Pusher (for chat).
+                Laravel, Node.js, MySQL, Firebase, Stripe, PayPal, Client payment gateway, REST APIs, React.
             </p>
         </div>
     </div>

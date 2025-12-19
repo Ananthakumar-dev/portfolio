@@ -1,13 +1,27 @@
 import React from 'react'
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 const page = () => {
   return (
     <div className="px-6 py-4">
-      <div className="border-b border-gray-200 pb-2">
-        <h2 className="text-2xl font-semibold">Skills & Tools — Full-stack essentials</h2>
-        <p className="text-sm text-gray-600 flex flex-col">
-            <span>Always eagerly explore the Technologies</span>
-        </p>
+      <div className="border-b border-gray-200 pb-2 flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-semibold">Skills & Tools — Full-stack essentials</h2>
+          <p className="text-sm text-gray-600 flex flex-col">
+              <span>Always eagerly explore the Technologies</span>
+          </p>
+        </div>
+
+        <div>
+          <Link href="/#experience">
+            <Button size="sm" className="cursor-pointer">
+              <ArrowLeft />
+              Back
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <div>
