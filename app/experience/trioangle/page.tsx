@@ -3,10 +3,18 @@ import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 
+const techStack = [
+  { name: "Laravel", logo: "laravel.svg" },
+  { name: "Node.js", logo: "nodejs.svg" },
+  { name: "MySQL", logo: "mysql.svg" },
+  { name: "Firebase", logo: "/tech/firebase.svg" },
+  { name: "React", logo: "react.svg" }
+];
+
 const page = () => {
   return (
-    <div className="px-6 py-4">
-        <div className="border-b border-gray-200 pb-2 flex items-center justify-between">
+    <div className="mx-auto max-w-5xl px-4 py-8 space-y-8">
+        <div className="border-b border-gray-200 px-6 py-4 flex items-center justify-between">
             <div>
                 <h2 className="text-2xl font-semibold">Backend Engineer — Marketplace Applications</h2>
                 <p className="text-sm text-gray-600 flex flex-col">
@@ -24,117 +32,98 @@ const page = () => {
             </div>
         </div>
 
-        <div>
-            <h6 className="font-semibold">Summary</h6>
+        <div className="px-6 py-4 bg-gray-100">
+            <div className="rounded-lg border bg-white p-6 mb-2">
+                <h3 className="text-lg font-semibold mb-2">Summary</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                    Worked on consumer marketplace platforms — an Airbnb clone and an Amazon clone.
+                    Handled both frontend and backend responsibilities, focusing on payments,
+                    booking flows, product search & filters, and real-time chat.
+                    Primary backend stacks were Laravel and Node.js.
+                </p>
+            </div>
 
-            <p className="pl-12">
-                worked on consumer marketplace platforms — an Airbnb clone and an Amazon clone. I handled both frontend and backend responsibilities, focusing on payments, booking flows, product search & filters, and real-time chat. My primary back-end stacks were Laravel and Node.js.
-            </p>
-        </div>
+            <div className="rounded-lg border bg-white p-6 mb-2">
+                <h3 className="text-lg font-semibold mb-3">Key Responsibilities</h3>
 
-        <div>
-            <h6 className="font-semibold">Key Responsibilities</h6>
+                <ul className="list-disc space-y-2 pl-5 text-sm">
+                    <li>Implemented Stripe, PayPal, and local gateway payments with refunds.</li>
+                    <li>Designed booking price calculations for Airbnb-style reservations.</li>
+                    <li>Built real-time chat between users and hosts.</li>
+                    <li>Implemented cart, orders, cancellations, and returns for e-commerce.</li>
+                    <li>Optimized SQL queries for large-scale search and filtering.</li>
+                    <li>Delivered features end-to-end across frontend and backend.</li>
+                </ul>
+            </div>
 
-            <ul className="pl-12 list-disc">
-                <li>
-                    Implemented payment systems (Stripe, PayPal, and a client’s local gateway) including payment flows, refunds, and Stripe account preferences.
-                </li>
+            <div className="rounded-lg border bg-white p-6 space-y-6 mb-2">
+                <h3 className="text-lg font-semibold">
+                    Notable Projects & Accomplishments
+                </h3>
 
-                <li>
-                    Designed and implemented booking flow calculations and pricing logic for the Airbnb clone.
-                </li>
+                {/* Airbnb */}
+                <div className="rounded-md border p-4">
+                    <h4 className="font-semibold mb-2">
+                    Airbnb Clone — Booking & Chat
+                    </h4>
 
-                <li>
-                    Built instant messaging between users and hosts to improve booking communications.
-                </li>
-
-                <li>
-                    Implemented cart, ordering, cancellations, returns, and cancellation policy flows for the Amazon clone.
-                </li>
-
-                <li>
-                    Built large, optimized search & filtering systems (product filters and room search) and optimized SQL queries for performance.
-                </li>
-
-                <li>
-                    Worked across frontend and backend to deliver features end-to-end.
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h6 className="font-semibold">Notable projects & accomplishments</h6>
-
-            <ul className="pl-12 list-disc">
-                <li>
-                    <p>
-                        Airbnb Clone — Booking & Chat
-                    </p>
-
-                    <ul className="pl-12 list-disc">
-                        <li>
-                            Implemented booking price calculations (nightly rates, cleaning, taxes, discounts, fees).
-                        </li>
-                        <li>
-                            Built calendar availability and overlapping booking validation.
-                        </li>
-                        <li>
-                            Implemented instant chat for host ↔ guest communication with online presence indicators.
-                        </li>
-                        <li>
-                            Optimized room search queries and filters for fast results.
-                        </li>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                    <li>Implemented booking price calculations (rates, fees, taxes, discounts).</li>
+                    <li>Built calendar availability and overlapping booking validation.</li>
+                    <li>Implemented real-time chat for host ↔ guest communication.</li>
+                    <li>Optimized room search queries and filters.</li>
                     </ul>
-                </li>
+                </div>
 
-                <li>
-                    <p>
-                        Amazon Clone — Shopping & Order Management
-                    </p>
+                {/* Amazon */}
+                <div className="rounded-md border p-4">
+                    <h4 className="font-semibold mb-2">
+                    Amazon Clone — Shopping & Order Management
+                    </h4>
 
-                    <ul className="pl-12 list-disc">
-                        <li>
-                            Implemented add-to-cart, order creation, cancellation flow, returns & refund policy.
-                        </li>
-                        <li>
-                            Implemented rules for cancellation windows and return management.
-                        </li>
-                        <li>
-                            Built filters & faceted search (category, price, rating, variants) with backend optimizations.
-                        </li>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                    <li>Implemented add-to-cart, order creation, cancellations, and returns.</li>
+                    <li>Designed cancellation window and return policy logic.</li>
+                    <li>Built faceted product search with backend optimizations.</li>
                     </ul>
-                </li>
+                </div>
 
-                <li>
-                    <p>Payments Integration (Stripe, PayPal, Client Gateway)</p>
+                {/* Payments */}
+                <div className="rounded-md border p-4">
+                    <h4 className="font-semibold mb-2">
+                    Payments Integration — Stripe & PayPal
+                    </h4>
 
-                    <ul className="pl-12 list-disc">
-                        <li>
-                            Integrated Stripe/PayPal for one-time payments and refunds.
-                        </li>
-
-                        <li>
-                            Implemented Stripe Connect / account preferences to handle marketplace payouts (connect accounts, onboarding, payouts settings).
-                        </li>
-                        
-                        <li>
-                            Handled refunds & reconciliation workflows on Stripe.
-                        </li>
-
-                        <li>
-                            Ensured secure handling of payment webhooks and retried failed events.
-                        </li>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                    <li>Integrated Stripe and PayPal for payments and refunds.</li>
+                    <li>Implemented Stripe Connect and account preference settings.</li>
+                    <li>Handled refund reconciliation and webhook reliability.</li>
+                    <li>Ensured secure handling of payment webhooks.</li>
                     </ul>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </div>
 
-        <div>
-            <h6 className="font-semibold">Tech Stack</h6>
+            <div className="rounded-lg border bg-white p-6">
+                <h3 className="text-lg font-semibold mb-4">Tech Stack</h3>
 
-            <p className="pl-12">
-                Laravel, Node.js, MySQL, Firebase, Stripe, PayPal, Client payment gateway, REST APIs, React.
-            </p>
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                    {techStack.map((tech) => (
+                    <div
+                        key={tech.name}
+                        className="flex flex-col items-center gap-2"
+                    >
+                        <img
+                        src={`/images/tech/${tech.logo}`}
+                        alt={tech.name}
+                        className="h-10 w-10 object-contain"
+                        />
+                        <span className="text-xs text-muted-foreground">
+                        {tech.name}
+                        </span>
+                    </div>
+                    ))}
+                </div>
+            </div>
         </div>
     </div>
   )

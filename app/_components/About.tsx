@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import about_img from '@/public/images/about-profile.jpg'
+import about_img from '@/public/images/about-profile.png'
 import { BriefcaseBusiness, CodeXml, GraduationCap } from 'lucide-react'
 
 const About = () => {

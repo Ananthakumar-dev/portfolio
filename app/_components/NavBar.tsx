@@ -38,7 +38,7 @@ const NavBar = () => {
             <a href="#about">About me</a>
           </li>
           <li className="px-4 py-3">
-            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
           </li>
           <li className="px-4 py-3">
             <a href="#mywork">My work</a>
