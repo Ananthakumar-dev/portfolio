@@ -23,6 +23,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
+        with:
+          version: 10 # change to your local major version (run: pnpm --version)
 
       - name: Setup Node
         uses: actions/setup-node@v7
