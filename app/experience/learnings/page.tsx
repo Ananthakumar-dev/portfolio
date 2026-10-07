@@ -1,4 +1,20 @@
 import React from "react";
+import Image from "next/image";
+import skillsLogo from "@/public/images/skills-icon.svg";
+import {
+  reactLogo,
+  nextjsLogo,
+  nodejsLogo,
+  javaLogo,
+  springLogo,
+  javascriptLogo,
+  phpLogo,
+  laravelLogo,
+  mysqlLogo,
+  cssLogo,
+  firebaseLogo,
+  htmlLogo,
+} from "@/lib/data/tech_logos";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -26,18 +42,18 @@ import Link from "next/link";
 import ThemeSwitch from "@/app/_components/ThemeSwitch";
 
 const techStack = [
-  { name: "React", category: "Frontend UI Library", logo: "react.svg" },
-  { name: "Next.js", category: "Full-Stack SSR Framework", logo: "nextjs.svg" },
-  { name: "Node.js", category: "JavaScript Runtime", logo: "nodejs.svg" },
-  { name: "Java", category: "Enterprise Language", logo: "java.svg" },
-  { name: "Spring Boot", category: "Microservices Framework", logo: "spring.svg" },
-  { name: "JavaScript", category: "Core Web Language", logo: "javascript.svg" },
-  { name: "PHP", category: "Backend Language", logo: "php.svg" },
-  { name: "Laravel", category: "Web Framework", logo: "laravel.svg" },
-  { name: "MySQL", category: "Relational Database", logo: "mysql.svg" },
-  { name: "CSS / Tailwind", category: "Styling & Responsive UI", logo: "css.svg" },
-  { name: "Firebase", category: "Realtime Services", logo: "firebase.svg" },
-  { name: "HTML5", category: "Semantic Markup", logo: "html.svg" },
+  { name: "React", category: "Frontend UI Library", logo: reactLogo },
+  { name: "Next.js", category: "Full-Stack SSR Framework", logo: nextjsLogo },
+  { name: "Node.js", category: "JavaScript Runtime", logo: nodejsLogo },
+  { name: "Java", category: "Enterprise Language", logo: javaLogo },
+  { name: "Spring Boot", category: "Microservices Framework", logo: springLogo },
+  { name: "JavaScript", category: "Core Web Language", logo: javascriptLogo },
+  { name: "PHP", category: "Backend Language", logo: phpLogo },
+  { name: "Laravel", category: "Web Framework", logo: laravelLogo },
+  { name: "MySQL", category: "Relational Database", logo: mysqlLogo },
+  { name: "CSS / Tailwind", category: "Styling & Responsive UI", logo: cssLogo },
+  { name: "Firebase", category: "Realtime Services", logo: firebaseLogo },
+  { name: "HTML5", category: "Semantic Markup", logo: htmlLogo },
 ];
 
 const keyMetrics = [
@@ -149,8 +165,8 @@ export default function TechnicalSummaryPage() {
             {/* Architecture Icon Badge Card */}
             <div className="shrink-0 flex flex-col items-center justify-center p-6 rounded-2xl bg-muted/40 dark:bg-muted/20 border border-border/50 self-start lg:self-center">
               <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white dark:bg-card p-4 flex items-center justify-center shadow-xs border border-border/60">
-                <img
-                  src="/images/skills-icon.svg"
+                <Image
+                  src={skillsLogo}
                   alt="Technical Skills Logo"
                   className="h-full w-full object-contain"
                 />
@@ -556,8 +572,8 @@ export default function TechnicalSummaryPage() {
                 className="group flex items-center gap-3.5 p-3.5 rounded-xl border border-border/40 bg-background/60 dark:bg-card/60 hover:border-primary/40 hover:bg-accent/40 transition-all"
               >
                 <div className="h-10 w-10 rounded-lg bg-muted/60 dark:bg-muted/30 p-2 flex items-center justify-center shrink-0 border border-border/40 group-hover:scale-105 transition-transform">
-                  <img
-                    src={`/images/tech/${tech.logo}`}
+                  <Image
+                    src={tech.logo}
                     alt={`${tech.name} logo`}
                     className="h-full w-full object-contain"
                   />

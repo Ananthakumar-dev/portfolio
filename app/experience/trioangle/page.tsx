@@ -1,4 +1,16 @@
 import React from "react";
+import Image from "next/image";
+import trioangleLogo from "@/public/images/trioangle.webp";
+import {
+  laravelLogo,
+  nodejsLogo,
+  nextjsLogo,
+  reactLogo,
+  mysqlLogo,
+  phpLogo,
+  javascriptLogo,
+  firebaseLogo,
+} from "@/lib/data/tech_logos";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -27,14 +39,14 @@ import Link from "next/link";
 import ThemeSwitch from "@/app/_components/ThemeSwitch";
 
 const techStack = [
-  { name: "Laravel", category: "Backend / API", logo: "laravel.svg" },
-  { name: "Node.js", category: "Backend / Microservices", logo: "nodejs.svg" },
-  { name: "Next.js", category: "Frontend Framework", logo: "nextjs.svg" },
-  { name: "React", category: "UI Library", logo: "react.svg" },
-  { name: "MySQL", category: "Database & Indexing", logo: "mysql.svg" },
-  { name: "PHP", category: "Core Language", logo: "php.svg" },
-  { name: "JavaScript", category: "Core Language", logo: "javascript.svg" },
-  { name: "Firebase", category: "Realtime & Push", logo: "firebase.svg" },
+  { name: "Laravel", category: "Backend / API", logo: laravelLogo },
+  { name: "Node.js", category: "Backend / Microservices", logo: nodejsLogo },
+  { name: "Next.js", category: "Frontend Framework", logo: nextjsLogo },
+  { name: "React", category: "UI Library", logo: reactLogo },
+  { name: "MySQL", category: "Database & Indexing", logo: mysqlLogo },
+  { name: "PHP", category: "Core Language", logo: phpLogo },
+  { name: "JavaScript", category: "Core Language", logo: javascriptLogo },
+  { name: "Firebase", category: "Realtime & Push", logo: firebaseLogo },
 ];
 
 const keyMetrics = [
@@ -146,8 +158,8 @@ export default function TrioangleExperiencePage() {
             {/* Company Logo Card */}
             <div className="shrink-0 flex flex-col items-center justify-center p-6 rounded-2xl bg-muted/40 dark:bg-muted/20 border border-border/50 self-start lg:self-center">
               <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white dark:bg-card p-3 flex items-center justify-center shadow-xs border border-border/60">
-                <img
-                  src="/images/trioangle.webp"
+                <Image
+                  src={trioangleLogo}
                   alt="Trioangle Technologies Logo"
                   className="h-full w-full object-contain"
                 />
@@ -525,8 +537,8 @@ export default function TrioangleExperiencePage() {
                 className="group flex items-center gap-3.5 p-3.5 rounded-xl border border-border/40 bg-background/60 dark:bg-card/60 hover:border-primary/40 hover:bg-accent/40 transition-all"
               >
                 <div className="h-10 w-10 rounded-lg bg-muted/60 dark:bg-muted/30 p-2 flex items-center justify-center shrink-0 border border-border/40 group-hover:scale-105 transition-transform">
-                  <img
-                    src={`/images/tech/${tech.logo}`}
+                  <Image
+                    src={tech.logo}
                     alt={`${tech.name} logo`}
                     className="h-full w-full object-contain"
                   />

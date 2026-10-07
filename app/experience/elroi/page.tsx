@@ -1,4 +1,15 @@
 import React from "react";
+import Image from "next/image";
+import elroiLogo from "@/public/images/elroi.png";
+import {
+  reactLogo,
+  laravelLogo,
+  phpLogo,
+  javascriptLogo,
+  mysqlLogo,
+  cssLogo,
+  htmlLogo,
+} from "@/lib/data/tech_logos";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -26,13 +37,13 @@ import Link from "next/link";
 import ThemeSwitch from "@/app/_components/ThemeSwitch";
 
 const techStack = [
-  { name: "React", category: "Frontend Framework", logo: "react.svg" },
-  { name: "Laravel", category: "Backend / REST API", logo: "laravel.svg" },
-  { name: "PHP", category: "Backend Language", logo: "php.svg" },
-  { name: "JavaScript", category: "Frontend Language", logo: "javascript.svg" },
-  { name: "MySQL", category: "Database & Schema", logo: "mysql.svg" },
-  { name: "CSS / Tailwind", category: "Styling & Responsive UI", logo: "css.svg" },
-  { name: "HTML5", category: "Semantic Markup", logo: "html.svg" },
+  { name: "React", category: "Frontend Framework", logo: reactLogo },
+  { name: "Laravel", category: "Backend / REST API", logo: laravelLogo },
+  { name: "PHP", category: "Backend Language", logo: phpLogo },
+  { name: "JavaScript", category: "Frontend Language", logo: javascriptLogo },
+  { name: "MySQL", category: "Database & Schema", logo: mysqlLogo },
+  { name: "CSS / Tailwind", category: "Styling & Responsive UI", logo: cssLogo },
+  { name: "HTML5", category: "Semantic Markup", logo: htmlLogo },
 ];
 
 const keyMetrics = [
@@ -147,8 +158,8 @@ export default function ElroiExperiencePage() {
             {/* Company Logo Card */}
             <div className="shrink-0 flex flex-col items-center justify-center p-6 rounded-2xl bg-muted/40 dark:bg-muted/20 border border-border/50 self-start lg:self-center">
               <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white dark:bg-card p-3 flex items-center justify-center shadow-xs border border-border/60">
-                <img
-                  src="/images/elroi.png"
+                <Image
+                  src={elroiLogo}
                   alt="Elroi Software Solutions Logo"
                   className="h-full w-full object-contain"
                 />
@@ -537,8 +548,8 @@ export default function ElroiExperiencePage() {
                 className="group flex items-center gap-3.5 p-3.5 rounded-xl border border-border/40 bg-background/60 dark:bg-card/60 hover:border-primary/40 hover:bg-accent/40 transition-all"
               >
                 <div className="h-10 w-10 rounded-lg bg-muted/60 dark:bg-muted/30 p-2 flex items-center justify-center shrink-0 border border-border/40 group-hover:scale-105 transition-transform">
-                  <img
-                    src={`/images/tech/${tech.logo}`}
+                  <Image
+                    src={tech.logo}
                     alt={`${tech.name} logo`}
                     className="h-full w-full object-contain"
                   />

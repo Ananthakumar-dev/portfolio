@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -26,7 +27,7 @@ const Experience = () => {
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 {/* Logo */}
                 <div className="h-12 w-12 rounded-xl bg-muted/60 dark:bg-muted/30 p-2 flex items-center justify-center shrink-0 border border-border/40">
-                  <img
+                  <Image
                     src={el.logo}
                     alt={`${el.name} logo`}
                     className="h-full w-full object-contain"
